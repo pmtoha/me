@@ -419,6 +419,8 @@
             align-items: center;
             gap: 10px;
             z-index: 10;
+            position: sticky;
+            bottom: 0;
         }
         .attach-button {
             background: none;
@@ -447,6 +449,7 @@
             outline: none;
             transition: border-color 0.2s;
             touch-action: manipulation;
+            min-width: 0;
         }
         .message-input:focus {
             border-color: var(--primary);
@@ -464,6 +467,7 @@
             cursor: pointer;
             transition: background-color 0.2s;
             flex-shrink: 0;
+            z-index: 5;
         }
         .send-button:hover {
             background-color: var(--primary-dark);
@@ -931,17 +935,17 @@
                 height: 32px;
             }
             .message-input-container {
-                padding: 10px 15px;
-                position: sticky;
-                bottom: 0;
+                padding: 8px 12px;
+                gap: 6px;
             }
             .message-input {
                 font-size: 1rem;
-                padding: 14px 16px;
+                padding: 10px 12px;
+                min-width: 0;
             }
             .send-button, .attach-button, .emoji-button {
-                width: 44px;
-                height: 44px;
+                width: 40px;
+                height: 40px;
             }
             .notification {
                 right: 10px;
@@ -1388,7 +1392,6 @@
             appId: "1:658848394624:web:c8b83b35c40c50b4482565",
             measurementId: "G-CTJW03KJTT"
         };
-
         firebase.initializeApp(firebaseConfig);
         const auth = firebase.auth();
         const db = firebase.firestore();
