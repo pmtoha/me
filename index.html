@@ -20,14 +20,12 @@
             --border: #e5e7eb;
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
         }
-
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--light);
@@ -36,13 +34,11 @@
             overflow: hidden;
             touch-action: manipulation;
         }
-
         .app-container {
             display: flex;
             height: 100vh;
             position: relative;
         }
-
         .sidebar {
             width: 260px;
             background-color: var(--dark);
@@ -53,7 +49,6 @@
             z-index: 20;
             transition: transform 0.3s ease;
         }
-
         .sidebar-overlay {
             position: fixed;
             top: 0;
@@ -64,16 +59,13 @@
             z-index: 15;
             display: none;
         }
-
         .sidebar-overlay.active {
             display: block;
         }
-
         .sidebar-header {
             padding: 20px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-
         .logo {
             display: flex;
             align-items: center;
@@ -81,20 +73,16 @@
             font-size: 1.5rem;
             font-weight: 700;
         }
-
         .logo i {
             color: var(--primary);
         }
-
         .user-profile {
             padding: 15px 20px;
             display: flex;
             align-items: center;
             gap: 12px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            position: relative;
         }
-
         .user-avatar {
             width: 40px;
             height: 40px;
@@ -105,14 +93,7 @@
             justify-content: center;
             font-weight: 600;
             flex-shrink: 0;
-            cursor: pointer;
         }
-
-        .user-info {
-            flex: 1;
-            cursor: pointer;
-        }
-
         .user-info h3 {
             font-size: 0.95rem;
             font-weight: 600;
@@ -120,7 +101,6 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
         .user-info p {
             font-size: 0.75rem;
             color: #9ca3af;
@@ -128,60 +108,12 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
-        .user-dropdown {
-            position: absolute;
-            top: 100%;
-            left: 20px;
-            right: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            margin-top: 8px;
-            display: none;
-            z-index: 30;
-        }
-
-        .user-dropdown.active {
-            display: block;
-        }
-
-        .user-dropdown-item {
-            padding: 12px 16px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            color: var(--dark);
-            border-radius: 8px;
-        }
-
-        .user-dropdown-item:hover {
-            background-color: var(--light);
-        }
-
-        .user-dropdown-item i {
-            color: var(--gray);
-            width: 20px;
-            text-align: center;
-        }
-
-        .user-dropdown-item.logout {
-            color: var(--danger);
-        }
-
-        .user-dropdown-item.logout i {
-            color: var(--danger);
-        }
-
         .channels-section {
             flex: 1;
             overflow-y: auto;
             padding: 15px 0;
             -webkit-overflow-scrolling: touch;
         }
-
         .section-header {
             padding: 0 20px 10px;
             display: flex;
@@ -192,7 +124,6 @@
             color: #9ca3af;
             letter-spacing: 0.05em;
         }
-
         .section-header button {
             background: none;
             border: none;
@@ -207,16 +138,13 @@
             justify-content: center;
             border-radius: 4px;
         }
-
         .section-header button:hover {
             color: white;
             background-color: rgba(255, 255, 255, 0.1);
         }
-
         .channel-list, .group-list, .dm-list {
             list-style: none;
         }
-
         .channel-item, .group-item, .dm-item {
             padding: 12px 20px;
             display: flex;
@@ -226,23 +154,19 @@
             transition: background-color 0.2s;
             position: relative;
         }
-
         .channel-item:hover, .group-item:hover, .dm-item:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
-
         .channel-item.active, .group-item.active, .dm-item.active {
             background-color: rgba(79, 70, 229, 0.3);
             border-left: 3px solid var(--primary);
         }
-
         .channel-item i, .group-item i, .dm-item i {
             color: #9ca3af;
             width: 20px;
             text-align: center;
             flex-shrink: 0;
         }
-
         .dm-item .dm-avatar {
             width: 32px;
             height: 32px;
@@ -255,13 +179,11 @@
             font-weight: 600;
             flex-shrink: 0;
         }
-
         .dm-item .dm-info {
             flex: 1;
             overflow: hidden;
             min-width: 0;
         }
-
         .dm-item .dm-name {
             font-size: 0.9rem;
             font-weight: 500;
@@ -269,12 +191,10 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
         .dm-item .dm-status {
             font-size: 0.7rem;
             color: #9ca3af;
         }
-
         .online-indicator {
             width: 8px;
             height: 8px;
@@ -283,14 +203,12 @@
             margin-left: auto;
             flex-shrink: 0;
         }
-
         .main-content {
             flex: 1;
             display: flex;
             flex-direction: column;
             overflow: hidden;
         }
-
         .chat-header {
             padding: 15px 20px;
             background-color: white;
@@ -301,7 +219,6 @@
             box-shadow: var(--shadow);
             z-index: 10;
         }
-
         .chat-info {
             display: flex;
             align-items: center;
@@ -309,7 +226,6 @@
             flex: 1;
             min-width: 0;
         }
-
         .chat-icon {
             width: 40px;
             height: 40px;
@@ -321,7 +237,6 @@
             color: white;
             flex-shrink: 0;
         }
-
         .chat-title h2 {
             font-size: 1.1rem;
             font-weight: 600;
@@ -329,7 +244,6 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
         .chat-title p {
             font-size: 0.75rem;
             color: var(--gray);
@@ -337,13 +251,11 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
         .chat-actions {
             display: flex;
             gap: 10px;
             flex-shrink: 0;
         }
-
         .chat-actions button {
             background: none;
             border: none;
@@ -357,12 +269,10 @@
             justify-content: center;
             transition: background-color 0.2s;
         }
-
         .chat-actions button:hover {
             background-color: var(--light);
             color: var(--dark);
         }
-
         .messages-container {
             flex: 1;
             overflow-y: auto;
@@ -371,22 +281,18 @@
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e5e7eb' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             -webkit-overflow-scrolling: touch;
         }
-
         .message {
             display: flex;
             margin-bottom: 16px;
             animation: fadeIn 0.3s ease-in-out;
         }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         .message.own {
             flex-direction: row-reverse;
         }
-
         .message-avatar {
             width: 36px;
             height: 36px;
@@ -399,13 +305,11 @@
             font-weight: 600;
             flex-shrink: 0;
         }
-
         .message-content {
             max-width: 70%;
             margin: 0 12px;
             min-width: 0;
         }
-
         .message-bubble {
             padding: 12px 16px;
             border-radius: 18px;
@@ -414,12 +318,10 @@
             position: relative;
             word-wrap: break-word;
         }
-
         .message.own .message-bubble {
             background-color: var(--primary);
             color: white;
         }
-
         .message-info {
             display: flex;
             align-items: center;
@@ -427,27 +329,87 @@
             font-size: 0.75rem;
             color: var(--gray);
         }
-
         .message.own .message-info {
             justify-content: flex-end;
         }
-
         .message-author {
             font-weight: 600;
             margin-right: 8px;
             white-space: nowrap;
         }
-
         .message-time {
             font-size: 0.7rem;
             white-space: nowrap;
         }
-
         .message-text {
             line-height: 1.4;
             word-wrap: break-word;
         }
-
+        .message-delete-btn {
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            margin-left: 8px;
+            opacity: 0;
+            transition: opacity 0.2s;
+            padding: 4px;
+            border-radius: 4px;
+        }
+        .message:hover .message-delete-btn {
+            opacity: 1;
+        }
+        .message-delete-btn:hover {
+            color: var(--danger);
+            background-color: rgba(239, 68, 68, 0.1);
+        }
+        .message-attachment {
+            margin-top: 8px;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        .message-image {
+            max-width: 100%;
+            max-height: 300px;
+            display: block;
+            border-radius: 8px 8px 0 0;
+        }
+        .file-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            font-size: 1.5rem;
+            color: var(--gray);
+        }
+        .file-info {
+            padding: 8px 12px;
+        }
+        .file-name {
+            font-weight: 500;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .file-size {
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-bottom: 8px;
+        }
+        .download-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .download-link:hover {
+            text-decoration: underline;
+        }
         .message-input-container {
             padding: 15px 20px;
             background-color: white;
@@ -457,7 +419,24 @@
             gap: 10px;
             z-index: 10;
         }
-
+        .attach-button {
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+            flex-shrink: 0;
+        }
+        .attach-button:hover {
+            background-color: var(--light);
+            color: var(--dark);
+        }
         .message-input {
             flex: 1;
             padding: 12px 16px;
@@ -468,11 +447,9 @@
             transition: border-color 0.2s;
             touch-action: manipulation;
         }
-
         .message-input:focus {
             border-color: var(--primary);
         }
-
         .send-button {
             width: 44px;
             height: 44px;
@@ -487,11 +464,9 @@
             transition: background-color 0.2s;
             flex-shrink: 0;
         }
-
         .send-button:hover {
             background-color: var(--primary-dark);
         }
-
         .modal {
             display: none;
             position: fixed;
@@ -505,11 +480,9 @@
             justify-content: center;
             padding: 20px;
         }
-
         .modal.active {
             display: flex;
         }
-
         .modal-content {
             background-color: white;
             border-radius: 12px;
@@ -522,12 +495,10 @@
             display: flex;
             flex-direction: column;
         }
-
         @keyframes slideIn {
             from { transform: translateY(-30px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
-
         .modal-header {
             padding: 20px;
             border-bottom: 1px solid var(--border);
@@ -536,12 +507,10 @@
             align-items: center;
             flex-shrink: 0;
         }
-
         .modal-title {
             font-size: 1.2rem;
             font-weight: 600;
         }
-
         .modal-close {
             background: none;
             border: none;
@@ -556,29 +525,24 @@
             border-radius: 50%;
             transition: background-color 0.2s;
         }
-
         .modal-close:hover {
             background-color: var(--light);
         }
-
         .modal-body {
             padding: 20px;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
             flex: 1;
         }
-
         .form-group {
             margin-bottom: 16px;
         }
-
         .form-label {
             display: block;
             margin-bottom: 6px;
             font-weight: 500;
             font-size: 0.9rem;
         }
-
         .form-input {
             width: 100%;
             padding: 12px 16px;
@@ -589,16 +553,13 @@
             transition: border-color 0.2s;
             touch-action: manipulation;
         }
-
         .form-input:focus {
             border-color: var(--primary);
         }
-
         .form-textarea {
             resize: vertical;
             min-height: 100px;
         }
-
         .modal-footer {
             padding: 15px 20px;
             border-top: 1px solid var(--border);
@@ -607,7 +568,6 @@
             gap: 10px;
             flex-shrink: 0;
         }
-
         .btn {
             padding: 10px 16px;
             border-radius: 8px;
@@ -617,26 +577,21 @@
             transition: background-color 0.2s;
             touch-action: manipulation;
         }
-
         .btn-primary {
             background-color: var(--primary);
             color: white;
         }
-
         .btn-primary:hover {
             background-color: var(--primary-dark);
         }
-
         .btn-secondary {
             background-color: var(--light);
             color: var(--dark);
             border: 1px solid var(--border);
         }
-
         .btn-secondary:hover {
             background-color: #f3f4f6;
         }
-
         .user-list {
             max-height: 300px;
             overflow-y: auto;
@@ -645,7 +600,6 @@
             margin-top: 10px;
             -webkit-overflow-scrolling: touch;
         }
-
         .user-list-item {
             padding: 12px 16px;
             display: flex;
@@ -656,15 +610,12 @@
             border-bottom: 1px solid var(--border);
             touch-action: manipulation;
         }
-
         .user-list-item:hover {
             background-color: var(--light);
         }
-
         .user-list-item:last-child {
             border-bottom: none;
         }
-
         .user-list-avatar {
             width: 36px;
             height: 36px;
@@ -677,19 +628,16 @@
             font-weight: 600;
             flex-shrink: 0;
         }
-
         .user-list-info {
             flex: 1;
             min-width: 0;
         }
-
         .user-list-name {
             font-weight: 500;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
         .user-list-email {
             font-size: 0.75rem;
             color: var(--gray);
@@ -697,7 +645,6 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
         .auth-container {
             display: flex;
             justify-content: center;
@@ -706,7 +653,6 @@
             background-color: var(--light);
             padding: 20px;
         }
-
         .auth-card {
             background-color: white;
             border-radius: 12px;
@@ -715,12 +661,10 @@
             padding: 30px;
             box-shadow: var(--shadow);
         }
-
         .auth-header {
             text-align: center;
             margin-bottom: 24px;
         }
-
         .auth-logo {
             display: inline-flex;
             align-items: center;
@@ -733,23 +677,19 @@
             font-size: 1.5rem;
             margin-bottom: 16px;
         }
-
         .auth-title {
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 8px;
         }
-
         .auth-subtitle {
             color: var(--gray);
         }
-
         .auth-tabs {
             display: flex;
             margin-bottom: 24px;
             border-bottom: 1px solid var(--border);
         }
-
         .auth-tab {
             flex: 1;
             padding: 12px;
@@ -760,20 +700,16 @@
             transition: all 0.2s;
             touch-action: manipulation;
         }
-
         .auth-tab.active {
             color: var(--primary);
             border-bottom-color: var(--primary);
         }
-
         .auth-form {
             display: none;
         }
-
         .auth-form.active {
             display: block;
         }
-
         .form-submit {
             width: 100%;
             padding: 12px;
@@ -787,17 +723,14 @@
             margin-top: 8px;
             touch-action: manipulation;
         }
-
         .form-submit:hover {
             background-color: var(--primary-dark);
         }
-
         .auth-divider {
             text-align: center;
             margin: 20px 0;
             position: relative;
         }
-
         .auth-divider::before {
             content: '';
             position: absolute;
@@ -807,14 +740,12 @@
             height: 1px;
             background-color: var(--border);
         }
-
         .auth-divider span {
             background-color: white;
             padding: 0 12px;
             position: relative;
             color: var(--gray);
         }
-
         .notification {
             position: fixed;
             top: 20px;
@@ -831,23 +762,18 @@
             transition: transform 0.3s ease-out;
             max-width: 90%;
         }
-
         .notification.show {
             transform: translateX(0);
         }
-
         .notification.success .notification-icon {
             background-color: var(--success);
         }
-
         .notification.error .notification-icon {
             background-color: var(--danger);
         }
-
         .notification.info .notification-icon {
             background-color: var(--primary);
         }
-
         .notification-icon {
             width: 24px;
             height: 24px;
@@ -858,12 +784,10 @@
             color: white;
             flex-shrink: 0;
         }
-
         .notification-message {
             flex: 1;
             word-wrap: break-word;
         }
-
         .notification-close {
             background: none;
             border: none;
@@ -876,7 +800,19 @@
             align-items: center;
             justify-content: center;
         }
-
+        .progress-bar {
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background-color: white;
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
         @media (max-width: 768px) {
             .sidebar {
                 position: fixed;
@@ -885,44 +821,73 @@
                 height: 100%;
                 transform: translateX(-100%);
                 z-index: 25;
+                width: 280px;
             }
-
             .sidebar.open {
                 transform: translateX(0);
             }
-
             .menu-toggle {
                 display: block;
             }
-
             .message-content {
                 max-width: 85%;
             }
-
             .chat-title h2 {
                 font-size: 1rem;
             }
-
             .chat-title p {
                 font-size: 0.7rem;
             }
-
             .modal-content {
                 max-width: 100%;
+                border-radius: 0;
+                height: 100%;
+                max-height: 100%;
+            }
+            .message-bubble {
+                max-width: 100%;
+            }
+            .message-attachment {
+                max-width: 100%;
+            }
+            .message-image {
+                max-height: 200px;
+            }
+            .file-icon {
+                height: 50px;
+            }
+            .chat-actions {
+                gap: 5px;
+            }
+            .chat-actions button {
+                width: 32px;
+                height: 32px;
+            }
+            .message-input-container {
+                padding: 10px 15px;
+            }
+            .message-input {
+                font-size: 0.9rem;
+            }
+            .send-button, .attach-button {
+                width: 40px;
+                height: 40px;
+            }
+            .notification {
+                right: 10px;
+                left: 10px;
+                max-width: none;
             }
         }
-
         @media (min-width: 769px) {
             .menu-toggle {
                 display: none;
             }
         }
-
         .touch-target {
             min-height: 44px;
             min-width: 44px;
         }
-
         body.sidebar-open {
             overflow: hidden;
         }
@@ -938,12 +903,10 @@
                 <h1 class="auth-title">ConnectChat</h1>
                 <p class="auth-subtitle">Professional messaging for teams</p>
             </div>
-
             <div class="auth-tabs">
                 <div class="auth-tab active" data-tab="login">Sign In</div>
                 <div class="auth-tab" data-tab="register">Register</div>
             </div>
-
             <form id="login-form" class="auth-form active">
                 <div class="form-group">
                     <label class="form-label" for="login-email">Email</label>
@@ -955,7 +918,6 @@
                 </div>
                 <button type="submit" class="form-submit">Sign In</button>
             </form>
-
             <form id="register-form" class="auth-form">
                 <div class="form-group">
                     <label class="form-label" for="register-name">Full Name</label>
@@ -971,11 +933,9 @@
                 </div>
                 <button type="submit" class="form-submit">Create Account</button>
             </form>
-
             <div class="auth-divider">
                 <span>Or continue with</span>
             </div>
-
             <div style="display: flex; gap: 10px;">
                 <button class="btn btn-secondary" style="flex: 1;">
                     <i class="fab fa-google"></i> Google
@@ -986,7 +946,6 @@
             </div>
         </div>
     </div>
-
     <div id="app-container" class="app-container" style="display: none;">
         <div class="sidebar-overlay" id="sidebar-overlay"></div>
         
@@ -997,25 +956,13 @@
                     <span>ConnectChat</span>
                 </div>
             </div>
-
-            <div class="user-profile" id="user-profile">
+            <div class="user-profile">
                 <div class="user-avatar" id="user-avatar">JD</div>
                 <div class="user-info">
                     <h3 id="user-name">John Doe</h3>
                     <p id="user-email">john@example.com</p>
                 </div>
-                <div class="user-dropdown" id="user-dropdown">
-                    <div class="user-dropdown-item" id="profile-settings">
-                        <i class="fas fa-cog"></i>
-                        <span>Profile Settings</span>
-                    </div>
-                    <div class="user-dropdown-item logout" id="logout-btn">
-                        <i class="fas fa-sign-out-alt"></i>
-                        <span>Logout</span>
-                    </div>
-                </div>
             </div>
-
             <div class="channels-section">
                 <div class="section-header">
                     <span>Channels</span>
@@ -1035,7 +982,6 @@
                         <span>announcements</span>
                     </li>
                 </ul>
-
                 <div class="section-header">
                     <span>Groups</span>
                     <button id="create-group-btn" class="touch-target"><i class="fas fa-plus"></i></button>
@@ -1054,7 +1000,6 @@
                         <span>Marketing</span>
                     </li>
                 </ul>
-
                 <div class="section-header">
                     <span>Direct Messages</span>
                     <button id="create-dm-btn" class="touch-target"><i class="fas fa-plus"></i></button>
@@ -1064,7 +1009,6 @@
                 </ul>
             </div>
         </div>
-
         <div class="main-content">
             <div class="chat-header">
                 <button class="menu-toggle touch-target" id="menu-toggle">
@@ -1085,20 +1029,21 @@
                     <button class="touch-target"><i class="fas fa-info-circle"></i></button>
                 </div>
             </div>
-
             <div class="messages-container" id="messages-container">
                 <!-- Messages will be loaded here dynamically -->
             </div>
-
             <div class="message-input-container">
+                <button class="attach-button touch-target" id="attach-button">
+                    <i class="fas fa-paperclip"></i>
+                </button>
                 <input type="text" class="message-input" id="message-input" placeholder="Type a message...">
                 <button class="send-button touch-target" id="send-button">
                     <i class="fas fa-paper-plane"></i>
                 </button>
+                <input type="file" id="file-input" style="display: none;" multiple>
             </div>
         </div>
     </div>
-
     <div id="create-channel-modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -1130,7 +1075,6 @@
             </div>
         </div>
     </div>
-
     <div id="create-group-modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -1161,7 +1105,6 @@
             </div>
         </div>
     </div>
-
     <div id="create-dm-modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -1183,7 +1126,6 @@
             </div>
         </div>
     </div>
-
     <div id="notification" class="notification">
         <div class="notification-icon">
             <i class="fas fa-check"></i>
@@ -1195,11 +1137,10 @@
             <i class="fas fa-times"></i>
         </button>
     </div>
-
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore-compat.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-storage-compat.js"></script>
     <script>
         // Your web app's Firebase configuration
     const firebaseConfig = {
@@ -1212,10 +1153,11 @@
       measurementId: "G-CTJW03KJTT"
     };
 
+
         firebase.initializeApp(firebaseConfig);
         const auth = firebase.auth();
         const db = firebase.firestore();
-
+        const storage = firebase.storage();
         const authContainer = document.getElementById('auth-container');
         const appContainer = document.getElementById('app-container');
         const loginForm = document.getElementById('login-form');
@@ -1223,6 +1165,8 @@
         const authTabs = document.querySelectorAll('.auth-tab');
         const messageInput = document.getElementById('message-input');
         const sendButton = document.getElementById('send-button');
+        const attachButton = document.getElementById('attach-button');
+        const fileInput = document.getElementById('file-input');
         const messagesContainer = document.getElementById('messages-container');
         const channelList = document.getElementById('channel-list');
         const groupList = document.getElementById('group-list');
@@ -1245,18 +1189,13 @@
         const notificationMessage = document.getElementById('notification-message');
         const notificationClose = document.querySelector('.notification-close');
         const userList = document.getElementById('user-list');
-        const userProfile = document.getElementById('user-profile');
-        const userDropdown = document.getElementById('user-dropdown');
-        const logoutBtn = document.getElementById('logout-btn');
-        const profileSettings = document.getElementById('profile-settings');
-
         let currentUser = null;
         let currentChannel = 'general';
         let currentGroup = null;
         let currentDm = null;
         let messagesListener = null;
         let usersListener = null;
-
+        
         function addTouchEvents(element, callback) {
             element.addEventListener('click', callback);
             element.addEventListener('touchstart', (e) => {
@@ -1264,7 +1203,7 @@
                 callback(e);
             });
         }
-
+        
         function saveUserProfile(user) {
             return db.collection('users').doc(user.uid).set({
                 uid: user.uid,
@@ -1278,7 +1217,7 @@
                 lastSeen: firebase.firestore.FieldValue.serverTimestamp()
             }, { merge: true });
         }
-
+        
         function updateUserOnlineStatus(isOnline) {
             if (currentUser) {
                 db.collection('users').doc(currentUser.uid).update({
@@ -1287,7 +1226,7 @@
                 });
             }
         }
-
+        
         function loadUsersForDM() {
             userList.innerHTML = '';
             
@@ -1326,7 +1265,7 @@
                     userList.innerHTML = '<p style="padding: 20px; text-align: center; color: var(--danger);">Error loading users</p>';
                 });
         }
-
+        
         function startDM(userId, userName) {
             createDmModal.classList.remove('active');
             selectDm(userId, userName);
@@ -1355,7 +1294,7 @@
                 });
             }
         }
-
+        
         function loadDMList() {
             dmList.innerHTML = '';
             
@@ -1389,7 +1328,7 @@
                     });
                 });
         }
-
+        
         function listenToUserStatus() {
             if (usersListener) {
                 usersListener();
@@ -1400,37 +1339,7 @@
                     loadDMList();
                 });
         }
-
-        // User dropdown toggle
-        addTouchEvents(userProfile, () => {
-            userDropdown.classList.toggle('active');
-        });
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!userProfile.contains(e.target)) {
-                userDropdown.classList.remove('active');
-            }
-        });
-
-        // Logout functionality
-        addTouchEvents(logoutBtn, () => {
-            auth.signOut()
-                .then(() => {
-                    showNotification('Successfully logged out!', 'success');
-                    userDropdown.classList.remove('active');
-                })
-                .catch(error => {
-                    showNotification('Error logging out: ' + error.message, 'error');
-                });
-        });
-
-        // Profile settings (placeholder)
-        addTouchEvents(profileSettings, () => {
-            showNotification('Profile settings coming soon!', 'info');
-            userDropdown.classList.remove('active');
-        });
-
+        
         authTabs.forEach(tab => {
             addTouchEvents(tab, () => {
                 const tabName = tab.getAttribute('data-tab');
@@ -1446,7 +1355,7 @@
                 }
             });
         });
-
+        
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const email = document.getElementById('login-email').value;
@@ -1460,7 +1369,7 @@
                     showNotification(error.message, 'error');
                 });
         });
-
+        
         registerForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const name = document.getElementById('register-name').value;
@@ -1480,7 +1389,7 @@
                     showNotification(error.message, 'error');
                 });
         });
-
+        
         auth.onAuthStateChanged(user => {
             if (user) {
                 currentUser = user;
@@ -1508,17 +1417,17 @@
                 }
             }
         });
-
+        
         function showApp() {
             authContainer.style.display = 'none';
             appContainer.style.display = 'flex';
         }
-
+        
         function showAuth() {
             authContainer.style.display = 'flex';
             appContainer.style.display = 'none';
         }
-
+        
         function loadUserData() {
             if (currentUser) {
                 document.getElementById('user-name').textContent = currentUser.displayName || 'User';
@@ -1530,7 +1439,7 @@
                 document.getElementById('user-avatar').textContent = initials;
             }
         }
-
+        
         function loadChannels() {
             const channels = [
                 { id: 'general', name: 'general', description: 'Company-wide announcements' },
@@ -1559,7 +1468,7 @@
                 channelList.appendChild(channelItem);
             });
         }
-
+        
         function loadGroups() {
             const groups = [
                 { id: 'design-team', name: 'Design Team', description: 'Design discussions' },
@@ -1588,7 +1497,7 @@
                 groupList.appendChild(groupItem);
             });
         }
-
+        
         function selectChannel(channelId, channelName, channelDescription) {
             currentChannel = channelId;
             currentGroup = null;
@@ -1616,7 +1525,7 @@
             loadMessages();
             closeSidebar();
         }
-
+        
         function selectGroup(groupId, groupName, groupDescription) {
             currentGroup = groupId;
             currentChannel = null;
@@ -1644,7 +1553,7 @@
             loadMessages();
             closeSidebar();
         }
-
+        
         function selectDm(dmId, dmName) {
             currentDm = dmId;
             currentChannel = null;
@@ -1672,7 +1581,7 @@
             loadMessages();
             closeSidebar();
         }
-
+        
         function loadMessages() {
             messagesContainer.innerHTML = '';
             
@@ -1702,13 +1611,15 @@
                     
                     snapshot.forEach(doc => {
                         const message = doc.data();
+                        // Add document ID to the message object
+                        message.id = doc.id;
                         addMessageToUI(message);
                     });
                     
                     messagesContainer.scrollTop = messagesContainer.scrollHeight;
                 });
         }
-
+        
         function addMessageToUI(message) {
             const messageEl = document.createElement('div');
             messageEl.className = 'message';
@@ -1720,22 +1631,123 @@
             const timestamp = message.timestamp ? new Date(message.timestamp.toDate()) : new Date();
             const timeString = timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
             
+            // Add message ID for deletion reference
+            messageEl.setAttribute('data-message-id', message.id);
+            
+            let fileAttachmentHtml = '';
+            if (message.file) {
+                if (message.file.isImage) {
+                    fileAttachmentHtml = `
+                        <div class="message-attachment">
+                            <img src="${message.file.url}" alt="${message.file.name}" class="message-image">
+                            <div class="file-info">
+                                <div class="file-name">${message.file.name}</div>
+                                <a href="${message.file.url}" target="_blank" class="download-link">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    fileAttachmentHtml = `
+                        <div class="message-attachment">
+                            <div class="file-icon">
+                                <i class="fas ${getFileIcon(message.file.type)}"></i>
+                            </div>
+                            <div class="file-info">
+                                <div class="file-name">${message.file.name}</div>
+                                <div class="file-size">${formatFileSize(message.file.size)}</div>
+                                <a href="${message.file.url}" target="_blank" class="download-link">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+            
             messageEl.innerHTML = `
                 <div class="message-avatar">${message.senderInitials}</div>
                 <div class="message-content">
                     <div class="message-info">
                         <span class="message-author">${message.senderName}</span>
                         <span class="message-time">${timeString}</span>
+                        ${message.senderId === currentUser.uid ? `
+                            <button class="message-delete-btn touch-target" data-message-id="${message.id}">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        ` : ''}
                     </div>
                     <div class="message-bubble">
-                        <div class="message-text">${message.text}</div>
+                        ${message.text ? `<div class="message-text">${message.text}</div>` : ''}
+                        ${fileAttachmentHtml}
                     </div>
                 </div>
             `;
             
             messagesContainer.appendChild(messageEl);
+            
+            // Add event listener for delete button
+            const deleteBtn = messageEl.querySelector('.message-delete-btn');
+            if (deleteBtn) {
+                addTouchEvents(deleteBtn, () => {
+                    deleteMessage(message.id);
+                });
+            }
         }
-
+        
+        function getFileIcon(fileType) {
+            if (fileType.startsWith('image/')) return 'fa-file-image';
+            if (fileType.startsWith('video/')) return 'fa-file-video';
+            if (fileType.startsWith('audio/')) return 'fa-file-audio';
+            if (fileType.includes('pdf')) return 'fa-file-pdf';
+            if (fileType.includes('word') || fileType.includes('document')) return 'fa-file-word';
+            if (fileType.includes('excel') || fileType.includes('spreadsheet')) return 'fa-file-excel';
+            if (fileType.includes('powerpoint') || fileType.includes('presentation')) return 'fa-file-powerpoint';
+            if (fileType.includes('zip') || fileType.includes('rar')) return 'fa-file-archive';
+            return 'fa-file';
+        }
+        
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+        
+        function deleteMessage(messageId) {
+            if (!confirm('Are you sure you want to delete this message?')) {
+                return;
+            }
+            
+            let collectionPath = 'channels';
+            let docId = currentChannel;
+            
+            if (currentGroup) {
+                collectionPath = 'groups';
+                docId = currentGroup;
+            } else if (currentDm) {
+                collectionPath = 'dms';
+                const userIds = [currentUser.uid, currentDm].sort();
+                docId = userIds.join('_');
+            }
+            
+            db.collection(collectionPath)
+                .doc(docId)
+                .collection('messages')
+                .doc(messageId)
+                .delete()
+                .then(() => {
+                    showNotification('Message deleted', 'success');
+                })
+                .catch(error => {
+                    showNotification('Error deleting message: ' + error.message, 'error');
+                });
+        }
+        
         function sendMessage() {
             const text = messageInput.value.trim();
             if (!text || (!currentChannel && !currentGroup && !currentDm)) return;
@@ -1773,35 +1785,261 @@
                     showNotification('Error sending message: ' + error.message, 'error');
                 });
         }
-
+        
         addTouchEvents(sendButton, sendMessage);
-
         messageInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 sendMessage();
             }
         });
-
+        
+        // File handling
+        addTouchEvents(attachButton, () => {
+            fileInput.click();
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                // If it's a single image, show preview
+                if (e.target.files.length === 1 && e.target.files[0].type.startsWith('image/')) {
+                    showImagePreview(e.target.files[0]);
+                } else {
+                    handleFileUpload(e.target.files);
+                }
+            }
+        });
+        
+        function handleFileUpload(files) {
+            if (!files || files.length === 0) return;
+            
+            // Check if we're in a channel, group, or DM
+            if (!currentChannel && !currentGroup && !currentDm) {
+                showNotification('Please select a conversation first', 'error');
+                return;
+            }
+            
+            Array.from(files).forEach(file => {
+                uploadFile(file);
+            });
+            
+            // Reset file input
+            fileInput.value = '';
+        }
+        
+        function uploadFile(file, caption = '') {
+            // Create a storage reference
+            const storageRef = storage.ref();
+            const fileRef = storageRef.child(`uploads/${currentUser.uid}/${Date.now()}_${file.name}`);
+            
+            // Show upload progress notification
+            const progressNotification = showProgressNotification(`Uploading ${file.name}...`);
+            
+            // Upload file
+            const uploadTask = fileRef.put(file);
+            
+            uploadTask.on('state_changed', 
+                (snapshot) => {
+                    // Update progress
+                    const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    updateProgressNotification(progressNotification, progress);
+                }, 
+                (error) => {
+                    // Handle error
+                    showNotification(`Error uploading ${file.name}: ${error.message}`, 'error');
+                    removeNotification(progressNotification);
+                }, 
+                () => {
+                    // Upload completed successfully
+                    uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+                        // Send message with file attachment
+                        sendFileMessage(file, downloadURL, caption);
+                        removeNotification(progressNotification);
+                        showNotification(`${file.name} uploaded successfully`, 'success');
+                    });
+                }
+            );
+        }
+        
+        function sendFileMessage(file, downloadURL, caption = '') {
+            let collectionPath = 'channels';
+            let docId = currentChannel;
+            
+            if (currentGroup) {
+                collectionPath = 'groups';
+                docId = currentGroup;
+            } else if (currentDm) {
+                collectionPath = 'dms';
+                const userIds = [currentUser.uid, currentDm].sort();
+                docId = userIds.join('_');
+            }
+            
+            const isImage = file.type.startsWith('image/');
+            
+            const message = {
+                text: caption || (isImage ? `Shared an image: ${file.name}` : `Shared a file: ${file.name}`),
+                senderId: currentUser.uid,
+                senderName: currentUser.displayName || 'User',
+                senderInitials: currentUser.displayName 
+                    ? currentUser.displayName.split(' ').map(n => n[0]).join('').toUpperCase()
+                    : 'U',
+                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                file: {
+                    name: file.name,
+                    size: file.size,
+                    type: file.type,
+                    url: downloadURL,
+                    isImage: isImage
+                }
+            };
+            
+            db.collection(collectionPath)
+                .doc(docId)
+                .collection('messages')
+                .add(message)
+                .catch(error => {
+                    showNotification('Error sending file: ' + error.message, 'error');
+                });
+        }
+        
+        function showImagePreview(file) {
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                const previewModal = document.createElement('div');
+                previewModal.className = 'modal active';
+                previewModal.innerHTML = `
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Image Preview</h3>
+                            <button class="modal-close touch-target">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="${e.target.result}" alt="Preview" style="max-width: 100%; border-radius: 8px;">
+                            <div style="margin-top: 15px;">
+                                <div class="form-group">
+                                    <label class="form-label">Caption (optional)</label>
+                                    <input type="text" id="image-caption" class="form-input" placeholder="Add a caption...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary touch-target preview-cancel">Cancel</button>
+                            <button class="btn btn-primary touch-target preview-send">Send</button>
+                        </div>
+                    </div>
+                `;
+                
+                document.body.appendChild(previewModal);
+                
+                // Add event listeners
+                const closeBtn = previewModal.querySelector('.modal-close');
+                const cancelBtn = previewModal.querySelector('.preview-cancel');
+                const sendBtn = previewModal.querySelector('.preview-send');
+                
+                const closeModal = () => {
+                    previewModal.classList.remove('active');
+                    setTimeout(() => {
+                        if (previewModal.parentNode) {
+                            previewModal.parentNode.removeChild(previewModal);
+                        }
+                    }, 300);
+                };
+                
+                addTouchEvents(closeBtn, closeModal);
+                addTouchEvents(cancelBtn, closeModal);
+                
+                addTouchEvents(sendBtn, () => {
+                    const caption = document.getElementById('image-caption').value.trim();
+                    
+                    closeModal();
+                    
+                    // Upload the file
+                    uploadFile(file, caption);
+                });
+                
+                // Close on background click
+                previewModal.addEventListener('click', (e) => {
+                    if (e.target === previewModal) {
+                        closeModal();
+                    }
+                });
+            };
+            
+            reader.readAsDataURL(file);
+        }
+        
+        function showProgressNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification info';
+            notification.innerHTML = `
+                <div class="notification-icon">
+                    <i class="fas fa-upload"></i>
+                </div>
+                <div class="notification-message">
+                    <div>${message}</div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <button class="notification-close touch-target">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Show notification
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+            
+            // Add close event
+            const closeBtn = notification.querySelector('.notification-close');
+            addTouchEvents(closeBtn, () => {
+                removeNotification(notification);
+            });
+            
+            return notification;
+        }
+        
+        function updateProgressNotification(notification, progress) {
+            const progressBarFill = notification.querySelector('.progress-bar-fill');
+            if (progressBarFill) {
+                progressBarFill.style.width = `${progress}%`;
+            }
+        }
+        
+        function removeNotification(notification) {
+            notification.classList.remove('show');
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+            }, 300);
+        }
+        
         addTouchEvents(createChannelBtn, () => {
             createChannelModal.classList.add('active');
         });
-
+        
         addTouchEvents(createGroupBtn, () => {
             createGroupModal.classList.add('active');
         });
-
+        
         addTouchEvents(createDmBtn, () => {
             createDmModal.classList.add('active');
             loadUsersForDM();
         });
-
+        
         modalCloseButtons.forEach(button => {
             addTouchEvents(button, () => {
                 const modalId = button.getAttribute('data-modal');
                 document.getElementById(modalId).classList.remove('active');
             });
         });
-
+        
         document.querySelectorAll('.modal').forEach(modal => {
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
@@ -1809,7 +2047,7 @@
                 }
             });
         });
-
+        
         addTouchEvents(createChannelSubmit, () => {
             const name = document.getElementById('channel-name').value.trim();
             const description = document.getElementById('channel-description').value.trim();
@@ -1827,7 +2065,7 @@
             
             loadChannels();
         });
-
+        
         addTouchEvents(createGroupSubmit, () => {
             const name = document.getElementById('group-name').value.trim();
             const description = document.getElementById('group-description').value.trim();
@@ -1844,15 +2082,15 @@
             
             loadGroups();
         });
-
+        
         addTouchEvents(menuToggle, () => {
             toggleSidebar();
         });
-
+        
         addTouchEvents(sidebarOverlay, () => {
             closeSidebar();
         });
-
+        
         function toggleSidebar() {
             if (window.innerWidth <= 768) {
                 sidebar.classList.toggle('open');
@@ -1860,7 +2098,7 @@
                 document.body.classList.toggle('sidebar-open');
             }
         }
-
+        
         function closeSidebar() {
             if (window.innerWidth <= 768) {
                 sidebar.classList.remove('open');
@@ -1868,7 +2106,7 @@
                 document.body.classList.remove('sidebar-open');
             }
         }
-
+        
         function showNotification(message, type = 'info') {
             notificationMessage.textContent = message;
             notification.className = `notification ${type}`;
@@ -1888,11 +2126,11 @@
                 notification.classList.remove('show');
             }, 3000);
         }
-
+        
         addTouchEvents(notificationClose, () => {
             notification.classList.remove('show');
         });
-
+        
         selectChannel('general', 'general', 'Company-wide announcements');
     </script>
 </body>
